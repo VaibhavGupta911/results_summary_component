@@ -1,38 +1,143 @@
-.App {
-  text-align: center;
+.main {
+
+    display: flex;
+    justify-content: center;
+    margin-top: 20vh;
+    margin-bottom: 20vh;
+    /*margin top is 20% of hight of screen*/
+
+
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.result {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    border-radius: 20px;
+    padding: 2rem;
+    margin-bottom: 2rem;
+    background-image: linear-gradient(hsl(252, 100%, 67%), hsl(241, 81%, 54%));
+    color: #ffffff;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.heading {
+    color: #c1b6ff;
+    font-size: large;
+    font-weight: 800;
+
 }
 
-.App-link {
-  color: #61dafb;
+.circle {
+    background-image: linear-gradient(hsla(256, 72%, 46%, 1), hsla(241, 72%, 46%, 0));
+    border-radius: 50%;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    height: 20vh;
+    width: 20vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    color: white;
+    padding: 1rem;
+
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.score {
+    font-size: 10vb;
+}
+.greeting{
+    font-size: 5vb;
+}
+.para {
+    font-size: 18px;
+    padding-top: 1rem;
+    padding-left: 3rem;
+    padding-right: 3rem;
+    padding-bottom: 1rem;
+}
+.summary{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 2rem;
+    margin-bottom: 2rem;
+    background-color: white;
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+    box-shadow: rgb(172, 172, 172)  1px 1px 10px;/*right botton and blurness*/
+
+}
+.sum-heading{
+    color: #333c59;
+    font-size: 1.5rem;
+    font-weight: 600;
+}
+.sum-div{
+    margin-top: 0.8rem;
+    margin-bottom: 1rem;
+display: flex;
+justify-content: space-between;
+flex-direction: row;
+}
+.sum-div div{
+    margin-right: 1rem;
+    text-align: justify;
+}
+.sum-div div ,button{
+    font-size: 1.2rem;
+    font-weight: 500;
+}
+.reaction{
+    color:  hsl(0, 100%, 67%);
+}
+.memory{
+  color:hsl(39, 100%, 56%);
+  border: hsl(39, 100%, 56%) 2px;
+}
+.verbal{
+    color: hsl(166, 100%, 37%);
+}.visual{
+    color: hsl(234, 85%, 45%);
+}
+button{
+    color: white;
+    background-color: #303b59;
+    padding:.5rem;
+    border-radius: 20px;
+    width: 100%;
+}
+button:hover{
+    background-color:hsl(241, 81%, 54%);
+}
+@media only screen and (max-width:786px) {
+    .main {
+        margin-top: 0;
+        margin-bottom: 0;
+    }
+
+    .container {
+        flex-direction: column;
+    }
+
+    .result {
+        border-top-left-radius: 0px;
+        border-top-right-radius: 0px;
+        margin-bottom: 0.5rem;
+    }
+    .summary{
+        box-shadow:none;
+    }
+    .sum-div{
+        margin-top: 0.5rem;
+        margin-bottom: 0.5rem;
+
+    }
 }
